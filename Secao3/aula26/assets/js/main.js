@@ -6,6 +6,7 @@ forms.addEventListener('submit', function (e) {
     const peso = Number(inputPeso.value);
     const altura = Number(inputAltura.value);
     let divisao = Number(peso / (altura * altura));
+    divisao = divisao.toFixed(2);
     if(isNaN(divisao) || isNaN(peso) || isNaN(altura)){
       ResultadoFun('Peso e/ou altura inválidos');
     }
